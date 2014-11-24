@@ -22,25 +22,7 @@ public class DeBruijnSeq {
 			list.add(START_VALUES[i]);
 		}
 	}
-	/*public void printSequence() {        ///DEprived
-		
-		@SuppressWarnings("unchecked")
-		final LinkedList<Integer> START = (LinkedList<Integer>) list.clone();
-
-		int count = 0;
-		print(count, list);
-		do {
-			count++;
-			int sum = K;
-			for (int i = 0; i < COEFF.length; i++) {
-				sum += COEFF[i]*list.get(i);
-			}
-
-			list.addFirst(sum % MOD_BASE);
-			list.removeLast();
-			print(count, list);
-		} while (list.hashCode() != START.hashCode());
-	}*/
+	
 	public int[] getNextValue(){
 		boolean zeroNbr = true;
 		boolean preZeroNbr = true;
@@ -67,13 +49,6 @@ public class DeBruijnSeq {
 			nbrs[k] = list.get(k);
 		}
 		return nbrs;
-	}
-	
-	private static void print(int count, LinkedList<Integer> list) {
-		System.out.print(count + ":\t");
-		for (int nbr : list) {
-			System.out.print(nbr);
-		}
-		System.out.println();
+		
 	}
 }
